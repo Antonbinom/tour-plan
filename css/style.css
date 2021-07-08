@@ -3,10 +3,13 @@
 }
 
 body {
-  font-family: 'Luckiest Guy', cursive;
   font-family: 'Mulish', sans-serif;
-  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
   color: #333;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
@@ -352,6 +355,8 @@ template {
   display: none;
 }
 
+/* Header
+ @mixin ========================================================================= */
 .navbar {
   background-color: #fff;
 }
@@ -367,6 +372,33 @@ template {
 .navbar__search {
   margin-right: auto;
   margin-left: 110px;
+}
+
+.navbar-bottom {
+  background: #0A223D;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 31px 0;
+  color: #fff;
+  list-style-type: none;
+}
+
+.navbar-menu__link {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.logo {
+  width: 177px;
 }
 
 .search {
@@ -418,4 +450,39 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #333;
+}
+
+/* Media
+ @mixin ======================================================================== */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+  .navbar-top {
+    padding: 30px 0;
+  }
+  .navbar-menu {
+    padding: 22px 0;
+  }
+  .navbar__search {
+    margin-left: auto;
+    max-width: 340px;
+  }
+  .navbar-menu__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+    width: 92%;
+  }
 }
