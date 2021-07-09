@@ -5,6 +5,7 @@
 body {
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
+  background: #F5FAFE;
   color: #333;
 }
 
@@ -456,6 +457,33 @@ template {
   color: #333;
 }
 
+.breadcrumb {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.breadcrumb__list {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.breadcrumb__list-item {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.breadcrumb__list-item:not(:last-child)::after {
+  content: '/';
+  margin-right: 2px;
+}
+
+.breadcrumb__list-link {
+  color: #0A223D;
+  text-decoration: none;
+}
+
 /* Media
  @mixin ======================================================================== */
 @media (max-width: 1200px) {
@@ -517,6 +545,9 @@ template {
 }
 
 @media (max-width: 576px) {
+  .navbar-top {
+    padding: 28px 0;
+  }
   .logo {
     width: 99px;
   }
