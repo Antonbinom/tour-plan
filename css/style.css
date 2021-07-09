@@ -484,6 +484,88 @@ template {
   text-decoration: none;
 }
 
+.hotel {
+  padding-top: 23px;
+  padding-bottom: 70px;
+}
+
+.hotel-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotel-info__offer {
+  margin-top: 4px;
+}
+
+.hotel-info__offer__name {
+  margin-top: 4px;
+  margin-right: 14px;
+}
+
+.hotel-name {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.hotel-description {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #333;
+}
+
+.hotel-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.offer {
+  padding: 4px 9px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 13px;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #EC1F46;
+}
+
+.stars {
+  flex-basis: 100%;
+}
+
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 6px 6px 6px;
+  max-width: 65px;
+  min-height: 45px;
+  color: #fff;
+  background: #EC1F46;
+  border-radius: 4px;
+}
+
+.rating__text {
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.rating__counter {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
 /* Media
  @mixin ======================================================================== */
 @media (max-width: 1200px) {
@@ -542,6 +624,26 @@ template {
     height: 1px;
     background-color: #333;
   }
+  .hotel-name {
+    flex-basis: 100%;
+  }
+  .hotel-info__text {
+    width: 100%;
+  }
+  .hotel-info__name {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .hotel-info__rating {
+    display: none;
+  }
+  .hotel-info__offer {
+    order: -1;
+    margin-right: 260px;
+  }
+  .stars {
+    flex-basis: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -550,5 +652,15 @@ template {
   }
   .logo {
     width: 99px;
+  }
+  .hotel {
+    padding-top: 5px;
+  }
+  .hotel-info__offer {
+    order: -1;
+    margin-right: 140px;
+  }
+  .hotel-description {
+    max-width: 280px;
   }
 }

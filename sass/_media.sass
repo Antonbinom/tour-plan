@@ -47,6 +47,23 @@
 				width: 16px
 				height: 1px
 				background-color: $text-color
+	.hotel
+		&-wrapper
+		&-name
+			flex-basis: 100%
+		&-info
+			&__text
+				width: 100%
+			&__name
+				margin-top: 10px
+				margin-right: 0
+			&__rating
+				display: none
+			&__offer
+				order: -1
+				margin-right: 260px
+	.stars
+		flex-basis: auto
 
 @media (max-width: 576px)
 	.navbar
@@ -54,3 +71,11 @@
 			padding: 28px 0
 	.logo
 		width: 99px
+	.hotel
+		padding-top: 5px
+		&-info
+			&__offer
+				order: -1
+				margin-right: 140px
+		&-description
+			max-width: 280px
