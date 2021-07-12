@@ -11,6 +11,10 @@ const swiper = new Swiper('.swiper-container', {
 	speed: 700,
 	autoplay: {delay: 4000},
 
-
+	// Переключение слайдера клавиатурой
+	keyboard: {
+    enabled: true,
+		onlyInViewport: false,
+  },
 
 });
