@@ -18,3 +18,14 @@ const swiper = new Swiper('.swiper-container', {
   },
 
 });
+
+ymaps.ready(init);
+
+function init(){
+  var myMap = new ymaps.Map("map", {
+      center: [59.762796, 30.358813],
+      zoom: 16
+  }, {
+      searchControlProvider: 'yandex#search'
+  });
+}
