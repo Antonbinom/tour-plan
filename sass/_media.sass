@@ -3,6 +3,8 @@
 @media (max-width: 1200px)
 	.container
 		max-width: 960px
+	.slider
+		width: 590px
 
 @media (max-width: 992px)
 	.container
@@ -23,7 +25,20 @@
 			max-width: 340px
 	.logo
 		width: 132px
-
+	.hotel
+		padding-bottom: 60px
+		&-grid
+			flex-direction: column
+		.slider
+			width: 100%
+			margin-bottom: 30px
+		.hotel
+			&-right
+				flex-direction: row
+		.booking
+			width: 340px
+		.map
+			width: 340px
 @media (max-width: 768px)
 	.container
 		max-width: 576px
@@ -48,7 +63,7 @@
 				height: 1px
 				background-color: $text-color
 	.hotel
-		&-wrapper
+		padding-bottom: 40px
 		&-name
 			flex-basis: 100%
 		&-info
@@ -64,6 +79,16 @@
 				margin-right: 260px
 	.stars
 		flex-basis: auto
+	.slider
+		height: 350px
+	.hotel
+		&-right
+			flex-direction: column !important
+			min-height: 450px
+	.booking
+		width: 100% !important
+	.map
+		width: 100% !important
 
 @media (max-width: 576px)
 	.navbar
@@ -71,7 +96,11 @@
 			padding: 28px 0
 	.logo
 		width: 99px
-
+	.slider
+		height: 250px
+		margin-bottom: 20px !important
+	.hotel-right
+		min-height: 440px
 @media (max-width: 460px)
 	.hotel
 		padding-top: 5px
@@ -81,3 +110,5 @@
 				margin-right: 140px
 		&-description
 			max-width: 280px
+	.slider
+		height: 180px

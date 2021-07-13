@@ -498,7 +498,6 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 350px;
 }
 
 .hotel-name {
@@ -585,7 +584,7 @@ template {
 
 .swiper-container {
   width: 100%;
-  height: 450px;
+  height: 100%;
   position: relative;
   border-radius: 8px;
 }
@@ -607,8 +606,15 @@ template {
   -webkit-transform: translate3d(0, 0, 0);
 }
 
+.swiper-slide__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .slider {
   width: 728px;
+  height: 450px;
 }
 
 .slider-button {
@@ -634,12 +640,6 @@ template {
 .slider-button--next {
   right: 18px;
   background-image: url(../img/arrow-next.svg);
-}
-
-.slider-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .booking {
@@ -730,6 +730,8 @@ template {
 .map {
   width: 350px;
   height: 213px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 /* Media
@@ -737,6 +739,9 @@ template {
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 590px;
   }
 }
 
@@ -762,6 +767,25 @@ template {
   }
   .logo {
     width: 132px;
+  }
+  .hotel {
+    padding-bottom: 60px;
+  }
+  .hotel-grid {
+    flex-direction: column;
+  }
+  .hotel .slider {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .hotel .hotel-right {
+    flex-direction: row;
+  }
+  .hotel .booking {
+    width: 340px;
+  }
+  .hotel .map {
+    width: 340px;
   }
 }
 
@@ -790,6 +814,9 @@ template {
     height: 1px;
     background-color: #333;
   }
+  .hotel {
+    padding-bottom: 40px;
+  }
   .hotel-name {
     flex-basis: 100%;
   }
@@ -810,6 +837,19 @@ template {
   .stars {
     flex-basis: auto;
   }
+  .slider {
+    height: 350px;
+  }
+  .hotel-right {
+    flex-direction: column !important;
+    min-height: 450px;
+  }
+  .booking {
+    width: 100% !important;
+  }
+  .map {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -818,6 +858,13 @@ template {
   }
   .logo {
     width: 99px;
+  }
+  .slider {
+    height: 250px;
+    margin-bottom: 20px !important;
+  }
+  .hotel-right {
+    min-height: 440px;
   }
 }
 
@@ -831,5 +878,8 @@ template {
   }
   .hotel-description {
     max-width: 280px;
+  }
+  .slider {
+    height: 180px;
   }
 }
