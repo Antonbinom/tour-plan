@@ -98,7 +98,15 @@
 			width: 92%
 		&__title
 			margin-bottom: 37px
-
+	.reviews
+		padding-bottom: 60px
+		&__title
+			margin-bottom: 50px
+			font-size: 30px
+			line-height: 38px
+		&-slider
+			&__item
+				padding: 0 62px 30px 62px
 @media (max-width: 576px)
 	.navbar
 		&-top
@@ -124,6 +132,21 @@
 	.subscribe
 		&__input
 			padding-left: 20px
+	.reviews
+		padding-bottom: 50px
+		&__title
+			margin-bottom: 42px
+			font-size: 18px
+			line-height: 23px
+		&-slider
+			&__item
+				padding: 0 31px 36px 31px
+				&:before
+					left: 31px
+				&:after
+					right: 31px
+			&__button
+				top: 45px
 @media (max-width: 460px)
 	.hotel
 		padding-top: 5px
@@ -138,3 +161,20 @@
 	.subscribe
 		width: 100%
 		max-width: 350px
+	.reviews
+		&__title
+			max-width: 245px
+			margin-bottom: 42px
+			font-size: 18px
+			line-height: 23px
+		&-slider
+			&__item
+				&:before
+					left: 20px
+				&:after
+					right: 20px
+			&__button
+				&--prev
+					left: 34px
+				&--next
+					right: 34px

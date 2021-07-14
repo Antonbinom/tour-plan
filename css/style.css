@@ -833,7 +833,7 @@ template {
   max-width: 730px;
   position: relative;
   margin: 45px auto 0;
-  padding: 0 62px 30px 62px;
+  padding: 0 97px 30px 97px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1061,6 +1061,17 @@ template {
   .newsletter__title {
     margin-bottom: 37px;
   }
+  .reviews {
+    padding-bottom: 60px;
+  }
+  .reviews__title {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .reviews-slider__item {
+    padding: 0 62px 30px 62px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1092,6 +1103,26 @@ template {
   .subscribe__input {
     padding-left: 20px;
   }
+  .reviews {
+    padding-bottom: 50px;
+  }
+  .reviews__title {
+    margin-bottom: 42px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .reviews-slider__item {
+    padding: 0 31px 36px 31px;
+  }
+  .reviews-slider__item:before {
+    left: 31px;
+  }
+  .reviews-slider__item:after {
+    right: 31px;
+  }
+  .reviews-slider__button {
+    top: 45px;
+  }
 }
 
 @media (max-width: 460px) {
@@ -1111,5 +1142,23 @@ template {
   .subscribe {
     width: 100%;
     max-width: 350px;
+  }
+  .reviews__title {
+    max-width: 245px;
+    margin-bottom: 42px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .reviews-slider__item:before {
+    left: 20px;
+  }
+  .reviews-slider__item:after {
+    right: 20px;
+  }
+  .reviews-slider__button--prev {
+    left: 34px;
+  }
+  .reviews-slider__button--next {
+    right: 34px;
   }
 }
