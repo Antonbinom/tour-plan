@@ -16,7 +16,6 @@ const swiper = new Swiper('.swiper-container', {
     enabled: true,
 		onlyInViewport: false,
   },
-
 });
 
 ymaps.ready(init);
