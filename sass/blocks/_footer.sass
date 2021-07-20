@@ -1,0 +1,133 @@
+.footer
+	padding: 108px 0 46px 0
+	background: $dark
+	color: $light
+	&-wrapper
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-auto-rows: minmax(40px, min-content)
+		grid-gap: 20px
+		align-items: start
+	&__logo
+		grid-row: 1 / 3
+		width: 166px
+		align-self: stretch
+	&__categories
+		grid-row: 1 / 4
+	&__social
+		&-network
+			display: flex
+			align-items: center
+			grid-row: 2 / 4
+			grid-column: span 2
+		&-links
+			width: 85px
+			height: 20px
+			display: flex
+			justify-content: space-between
+	&__legal
+		justify-self: end
+	&__contact-details
+		grid-row: 5
+		grid-column: span 2
+	&__form
+		grid-row: 5
+		grid-column: span 2
+		display: flex
+		justify-content: space-between
+		justify-self: end
+		align-items: start
+		flex-wrap: wrap
+		max-width: 539px
+		&-bottom
+			display: flex
+			justify-content: space-between
+			align-items: center
+			height: 100%
+			width: 100%
+	&__input
+		height: 50px
+		flex-basis: 48%
+		margin-bottom: 15px
+		padding: 0 23px
+		font-size: 12px
+		line-height: 15px
+		color: $footer-text
+		border: none
+		border-radius: 4px
+		background-color: #fff
+	&__message
+		flex-basis: 100%
+		height: 123px
+		padding: 18px 23px
+		margin-bottom: 22px
+		font-size: 12px
+		line-height: 15px
+		color: $footer-text
+		border-radius: 4px
+		border: none
+	&__button
+		@include button
+		padding: 18px 66px
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+	&__info
+		// align-self: center
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+		color: #e0e0e0
+	&__bottom
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		grid-row: 7
+		grid-column: 2 / 6
+		align-self: end
+		&-list
+			display: flex
+			justify-content: space-between
+			grid-column: 2 / 4
+			width: 283px
+			margin: 0
+			padding: 0
+			list-style: none
+			font-size: 12px
+			line-height: 15px
+		&-payment
+			grid-column: 7
+	&__ul
+		padding: 0
+		margin: 0
+		list-style: none
+	&__title
+		margin-bottom: 16px
+		font-weight: bold
+		font-size: 18px
+		line-height: 23px
+		color: $light
+		text-transform: uppercase
+		&--social
+			margin-bottom: 0
+			margin-right: 42px
+		&--contact
+			margin-bottom: 25px
+		&--form
+			margin-bottom: 25px
+	&__item
+		display: flex
+		align-items: flex-start
+		font-size: 14px
+		line-height: 1.6
+		color: $footer-text
+		&--contact
+			margin-bottom: 25px
+	&__icon
+		&-wrapper
+			min-width: 40px
+	&__text
+		color: $footer-text
+		margin-bottom: 25px
+	&__link
+		text-decoration: none
+		color: inherit
