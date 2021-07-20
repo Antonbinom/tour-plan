@@ -50,3 +50,10 @@ const reviewSlider = new Swiper('.reviews-slider', {
 });
 
 $('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
+
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener("click", function () {
+  console.log('Click');
+  document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
+
+  });
