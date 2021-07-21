@@ -23,13 +23,14 @@
             <img src="img/logo.png" alt="Logo: Best Tour Plan" class="logo__image" />
           </a>
 
-          <form action="#" class="search navbar__search">
+          <form action="#" class="search navbar__search navbar__search--mobile--hidden">
             <input type="text" class="search__input" placeholder="Search Location" />
             <button class="search__button">
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
-          <a href="#" class="user navbar-user">
+          <!-- /.search -->
+          <a href="#" class="user navbar__user navbar__user--mobile--hidden">
             <img src="img/user.jpg" alt="User avatar" class="user__avatar" />
             <span class="user__name">Nathan</span>
           </a>
@@ -45,30 +46,46 @@
       <!-- /.container -->
       <nav class="navbar-bottom">
         <div class="container">
-          <ul class="navbar-menu">
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">All Deals</a>
+          <ul class="navbar__menu">
+            <li class="navbar__menu-item navbar__menu-item--user navbar__menu-item--mobile--visible">
+              <a href="#" class="user navbar__user navbar__user--mobile--visible">
+                <img src="img/user.jpg" alt="User avatar" class="user__avatar" />
+                <span class="user__name">Nathan</span>
+              </a>
             </li>
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Hotels</a>
+            <!-- /.user -->
+            <li class="navbar__menu-item navbar__menu-item--search navbar__menu-item--mobile--visible">
+              <form action="#" class="search navbar__search navbar__search--mobile--visible">
+                <input type="text" class="search__input" placeholder="Search Location" />
+                <button class="search__button">
+                  <img src="img/search.svg" alt="Icon: search" />
+                </button>
+              </form>
             </li>
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Activities</a>
+            <!-- /.search -->
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">All Deals</a>
             </li>
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">Hotels</a>
             </li>
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Restaurants</a>
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">Activities</a>
             </li>
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Events</a>
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">Hotel Day Packages</a>
             </li>
-            <li class="navbar-menu__item">
-              <a href="#" class="navbar-menu__link">Rodrigues</a>
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">Restaurants</a>
+            </li>
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">Events</a>
+            </li>
+            <li class="navbar__menu-item">
+              <a href="#" class="navbar__menu-link">Rodrigues</a>
             </li>
           </ul>
-          <!-- /.navbar-menu -->
+          <!-- /.navbar__menu -->
         </div>
         <!-- /.container -->
       </nav>

@@ -23,15 +23,14 @@
 	.navbar
 		&-top
 			padding: 30px 0
-		&-menu
+		&__menu
 			padding: 22px 0
-		&__search
-			margin-left: auto
-		&-menu
-			&__link
+			&-link
 				font-size: 12px
 				line-height: 15px
-	.search
+		&__search
+			margin-left: auto
+		.search
 		&__input
 			max-width: 340px
 	.logo
@@ -124,12 +123,44 @@
 				top: 0
 				right: 0
 				z-index: 99
-		&__search, &-user
-			display: none
+		&__user, &__search
+			&--mobile
+				&--hidden
+					display: none
+				&--visible
+					display: flex
+		&__user
+			&--mobile
+				&--visible
+					flex-direction: column
+					justify-content: center
 		&-bottom
 			display: none
+			position: fixed
+			top: 78px
+			left: 0
+			right: 0
+			bottom: 0
 			&--visible
 				display: block
+		&__menu
+			padding-top: 31px
+			flex-direction: column
+			&-item
+				margin-bottom: 20px
+				&--mobile
+					&--visible
+						display: block
+				&--user
+					margin-bottom: 27px
+				&--search
+					margin-bottom: 39px
+	.user
+		&__avatar
+			margin-bottom: 10px
+		&__name
+			margin-left: 0
+			color: $light
 	.menu
 		&-button
 			display: flex
