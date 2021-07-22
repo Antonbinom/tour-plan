@@ -8,15 +8,22 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$mail = $_POST['mail'];
 
-// Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Обращение клиента</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+if(isset($mail)){
+    $title = 'Подписка на рассылку с Best Tour Plan';
+		$body = "
+		<h2>Подписка на рассылку</h2>
+		<b>Почта:</b><br>$mail";
+} else {
+    $title = 'Новое обращение Best Tour Plan';
+		$body = "
+		<h2>Обращение клиента</h2>
+		<b>Имя:</b> $name<br>
+		<b>Телефон:</b> $phone<br><br>
+		<b>Сообщение:</b><br>$message
+		";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -38,19 +45,6 @@ try {
     // Получатель письма
     $mail->addAddress('Antonbinom@yandex.ru');
 
-    // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }
-}
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
