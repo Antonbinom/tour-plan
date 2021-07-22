@@ -36,8 +36,7 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'antonbinom2021@gmail.com'; // Логин на почте
-    $mail->Password   = 'rg1570s5470'; // Пароль на почте
+		include 'logpass.php';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('antonbinom2021@gmail.com', 'Семенихин Антон'); // Адрес самой почты и имя отправителя
