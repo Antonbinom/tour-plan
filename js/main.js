@@ -10,6 +10,16 @@ function init(){
   });
 }
 
+// ---------- Pralax for Newsletter-----------
+
+$('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
+
+  var menuButton = document.querySelector(".menu-button");
+  menuButton.addEventListener("click", function () {
+    console.log('Click');
+    document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
+});
+
 // ---------- JQuery -----------
 $(document).ready(function(){
 
@@ -55,17 +65,6 @@ const reviewSlider = new Swiper('.reviews-slider', {
   },
 });
 
-// ---------- Pralax for Newsletter-----------
-
-$('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
-
-var menuButton = document.querySelector(".menu-button");
-menuButton.addEventListener("click", function () {
-  console.log('Click');
-  document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
-  });
-
-
 // ---------- Modal Window -----------
 
 var modalButton = $('[data-toggle=modal]');
@@ -78,7 +77,10 @@ function openModal() {
   var targetModal = $(this).attr('data-href');
   $(targetModal).find('.modal__overlay').addClass('modal__overlay--visible');
   $(targetModal).find('.modal__dialog').addClass('modal__dialog--visible');
-}
+
+  $('body').addClass('hold');
+};
+
 
 function closeModal(event) {
   event.preventDefault();
@@ -86,11 +88,30 @@ function closeModal(event) {
   var modalDialog = $('.modal__dialog');
   modalDialog.removeClass('modal__dialog--visible');
   modalOverlay.removeClass('modal__overlay--visible');
-}
+  $('body').removeClass('hold');
+};
+
+$('.modal').on('click', function(event) {
+  var modalOverlay = $('.modal__overlay');
+  var modalDialog = $('.modal__dialog');
+  modalDialog.removeClass('modal__dialog--visible');
+  modalOverlay.removeClass('modal__overlay--visible');
+  $('body').removeClass('hold');
+});
 
 $(document).on('keydown', function(event) {
-  if (event.keyCode == 27)
+  var modalOverlay = $('.modal__overlay');
+  var modalDialog = $('.modal__dialog');
+
+  if (event.code == 'Escape') {
     modalDialog.removeClass('modal__dialog--visible');
-  modalOverlay.removeClass('modal__overlay--visible');
+    modalOverlay.removeClass('modal__overlay--visible');
+    $('body').removeClass('hold');
+  }
 });
+
+$('.modal__dialog').on('click', function(event) {
+  event.stopPropagation();
+});
+
 });
