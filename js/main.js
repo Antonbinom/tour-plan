@@ -73,7 +73,6 @@ modalButton.on('click', openModal);
 closeModalButton.on('click', closeModal);
 
 function openModal() {
-  console.log($(this).attr('data-href'));
   var targetModal = $(this).attr('data-href');
   $(targetModal).find('.modal__overlay').addClass('modal__overlay--visible');
   $(targetModal).find('.modal__dialog').addClass('modal__dialog--visible');
