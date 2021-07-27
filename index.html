@@ -220,21 +220,12 @@
               </div>
               <h4 class="packages__name packages__name--active">Hotel Blue Haven</h4>
               <p class="packages__text packages__text--active">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae a nostrum voluptatibus, aliquam in
-                accusantium necessitatibus hic ratione, ut odio deserunt totam? Labore quod consectetur iste quia velit
-                itaque a voluptates, cumque sint omnis quam animi iusto quibusdam fugit! Consequatur, recusandae dicta
-                voluptatem error voluptas possimus inventore, quas alias distinctio omnis iure molestias nobis! Enim
-                iure illo at officiis praesentium labore sint. Tempore repudiandae adipisci tenetur ad laudantium. Autem
-                eveniet ullam dolore facilis. Iure, odio repellendus velit nam magni consectetur illo necessitatibus.
-                Tempora, mollitia nemo error blanditiis harum reprehenderit officiis molestiae, sapiente dolor vero ut
-                eligendi dolorum, illum quod laborum? Aperiam recusandae explicabo totam deserunt consequuntur laborum
-                nesciunt nostrum amet numquam perferendis enim, voluptas sapiente nihil autem quis. Aut ipsum quasi ut.
-                Quos quisquam, quas enim pariatur consequuntur incidunt suscipit optio amet autem deserunt minima,
-                mollitia qui tempore tenetur itaque? Delectus magnam recusandae nobis doloremque error qui quas,
-                voluptatum cupiditate architecto ratione id eius sint sit sapiente, quasi porro molestiae libero
-                consequuntur ex consequatur perferendis. Laudantium aspernatur quasi dolores nulla! Natus, accusantium
-                ut? Voluptas ullam, ex fuga animi corrupti tempore voluptatibus asperiores dolor consequuntur ducimus
-                itaque, ab alias facilis molestiae omnis non, amet rem necessitatibus ratione cupiditate cum ea. Velit!
+                Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit. Ipsum est
+                fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute quis duis epteur excepteur ipsum
+                occaecat eiusmod nsectetur enim laborum magna mollit. Ipsum est fugiat velit ea ullamco do Aute quis
+                duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit. Ipsum est fugiat velit
+                ea llamco do esse ut in veniam sun in onsequat. Aute quis duis epteur excepteur ipsum occaecat eiusmod
+                nsectetur enim laborum magna mollit. Ipsum est fugiat velit ea ullamco do
               </p>
               <div class="packages-room packages-room--active">
                 <div class="packages-room__item">
@@ -392,10 +383,21 @@
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="send.php" method="POST" class="newsletter-subscribe subscribe">
-          <input type="text" class="subscribe__input" placeholder="Your email address" name="mail" />
-          <button class="subscribe__button">Send</button>
-        </form>
+        <div class="newsletter__input-wrapper">
+            <form
+						action="send.php"
+						method="POST"
+						class="form subscribe newsletter__subscribe"
+					>
+						<input
+							type="email"
+							class="input subscribe__input"
+							placeholder="Your email address"
+							name="mail"
+              required
+						/>
+            <button class="subscribe__button">Send</button>
+        </div>
       </div>
       <!-- /.newsletter-wrapper -->
     </section>
@@ -591,6 +593,7 @@
       </div>
       <!-- /.container -->
     </section>
+
     <!-- /.activities -->
     <div class="footer">
       <div class="container">
@@ -712,11 +715,23 @@
             </ul>
           </div>
           <!-- /.footer__contact-details -->
-          <div class="footer__form">
+          <div class="footer__form form">
             <h3 class="footer__title footer__title--form">Send us a message</h3>
-            <form action="send.php" class="footer__form" method="post">
-              <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" />
-              <input type="text" class="footer__input input" placeholder="Phone Number*" name="phone" />
+            <form action="send.php" class="footer__form form" method="post">
+              <div class="footer__input-wrapper">
+                <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" required />
+              </div>
+              <div class="footer__input-wrapper">
+                <input
+                  type="tel"
+                  class="footer__input input__phone input"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                  minlength="11"
+                  maxlength="11"
+                />
+              </div>
               <textarea class="footer__message message" placeholder="Message" name="message"></textarea>
               <div class="footer__form-bottom">
                 <button class="footer__button button">Send</button>
@@ -753,13 +768,41 @@
             <img src="img/close.svg" alt="Icon: Close" />
           </a>
           <h3 class="modal__title">Booking</h3>
-          <form action="send.php" class="modal__form" method="post">
-            <input type="text" class="modal__input input" placeholder="Your Full Name*" name="name" />
-            <input type="text" class="modal__input input" placeholder="Phone Number*" name="phone" />
-            <input type="text" class="modal__input input" placeholder="Email*" name="mail" />
-            <textarea class="modal__message message" placeholder="Message" name="message"></textarea>
+          <form action="send.php" class="modal__form form" method="post">
+            <input
+              type="text"
+              class="modal__input input"
+              placeholder="Your Full Name*"
+              minlength="2"
+              name="name"
+              required
+              aria-invalid="true"
+            />
+            <input
+              type="tel"
+              class="modal__input input__phone input"
+              placeholder="Phone Number*"
+              name="phone"
+              required
+              minlength="11"
+              maxlength="11"
+              aria-invalid="true"
+            />
+            <input
+            type="email"
+            class="modal__input input"
+            placeholder="Email*"
+            name="mail"
+            required
+            />
+            <textarea
+            class="modal__message message"
+            placeholder="Message"
+            name="message"
+            >
+            </textarea>
             <div class="modal__form-bottom">
-              <button class="modal__button button">Send</button>
+              <button type="submit" class="modal__button button">Send</button>
               <span class="modal__info">* Required Fields</span>
             </div>
           </form>
@@ -773,6 +816,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=4f8bc164-54df-453f-8f7f-7e397da20b80&lang=ru_RU"></script>
     <script src="js/swiper-bundle.min.js"></script>

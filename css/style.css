@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
@@ -8,6 +11,7 @@ body {
   font-weight: 400;
   background: #F5FAFE;
   color: #333;
+  margin: 0;
 }
 
 body.hold {
@@ -25,7 +29,7 @@ img {
 
 .input {
   height: 50px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   padding: 0 23px;
   font-size: 12px;
   line-height: 15px;
@@ -33,9 +37,11 @@ img {
   border: none;
   border-radius: 4px;
   background-color: #fff;
+  outline: none;
 }
 
 .message {
+  margin-top: 15px;
   flex-basis: 100%;
   height: 123px;
   padding: 18px 23px;
@@ -55,6 +61,12 @@ img {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+}
+
+.invalid {
+  color: #EC1F46;
+  font-size: 10px;
 }
 
 /* Document
@@ -478,6 +490,7 @@ template {
   padding-top: 4px;
   border: none;
   background: #EC1F46;
+  cursor: pointer;
 }
 
 .user {
@@ -854,6 +867,7 @@ template {
   height: 500px;
   width: 100%;
   padding: 46px 21px 30px 43px;
+  margin-left: 2px;
 }
 
 .packages__name {
@@ -897,6 +911,7 @@ template {
 }
 
 .packages-room--active {
+  margin-left: 2px;
   margin-bottom: 37px;
 }
 
@@ -975,7 +990,7 @@ template {
 
 .newsletter {
   position: relative;
-  padding: 98px 0 87px 0;
+  padding: 78px 0 67px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -998,11 +1013,12 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 731px;
+  max-width: 730px;
   margin: auto;
 }
 
 .newsletter-title {
+  margin: 20px 0;
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
@@ -1021,17 +1037,17 @@ template {
 .subscribe {
   position: relative;
   width: 350px;
-  height: 55px;
+  min-height: 55px;
   overflow: hidden;
   border-radius: 4px;
 }
 
 .subscribe__input {
-  position: absolute;
+  width: 100%;
+  height: 55px;
+  margin: 0;
   padding-left: 33px;
   padding-right: 70px;
-  width: 100%;
-  height: 100%;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
@@ -1044,19 +1060,15 @@ template {
   top: 0;
   right: 0;
   min-width: 65px;
-  height: 100%;
+  height: 55px;
   border: none;
+  border-radius: 0 4px 4px 0;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   color: #fff;
   background-color: #EC1F46;
   cursor: pointer;
-}
-
-.parallax-bg {
-  width: 100%;
-  height: 260px;
 }
 
 .reviews {
@@ -1296,7 +1308,6 @@ template {
 }
 
 .modal__title {
-  margin-bottom: 15px;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
@@ -1313,6 +1324,8 @@ template {
 
 .modal__input {
   width: 100%;
+  font-size: 12px;
+  color: #bdbdbd;
 }
 
 .modal__message {
@@ -1342,8 +1355,9 @@ template {
 .footer-wrapper {
   display: grid;
   grid-template-columns: repeat(4, minmax(min-content, 1fr));
-  grid-gap: 15px;
-  grid-auto-rows: minmax(45px, min-content);
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  grid-auto-rows: minmax(40px, min-content);
   align-items: start;
 }
 
@@ -1355,10 +1369,17 @@ template {
 }
 
 .footer__categories {
+  margin-left: 4px;
   grid-row: 1 / 4;
 }
 
+.footer__additional {
+  margin-left: 8px;
+}
+
 .footer__social-network {
+  margin-top: 4px;
+  margin-left: 8px;
   display: flex;
   align-items: center;
   grid-row: 2 / 4;
@@ -1401,8 +1422,12 @@ template {
 }
 
 .footer__input {
-  flex-basis: 48%;
-  margin-bottom: 15px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.footer__input-wrapper {
+  flex-basis: 47%;
 }
 
 .footer__message {
@@ -1426,15 +1451,14 @@ template {
 .footer__bottom {
   height: 22px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column: 2 / 6;
-  margin-top: 14px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column: 2 / 5;
 }
 
 .footer__bottom-list {
   display: flex;
   justify-content: space-between;
-  align-self: center;
+  align-self: end;
   grid-column: 2 / 4;
   width: 283px;
   margin: 0;
@@ -1445,7 +1469,7 @@ template {
 }
 
 .footer__bottom-payment {
-  grid-column: 7;
+  grid-column: 6;
   align-self: center;
 }
 
@@ -1475,6 +1499,7 @@ template {
 
 .footer__title--form {
   margin-bottom: 35px;
+  width: 100%;
 }
 
 .footer__item {
@@ -1637,7 +1662,7 @@ template {
     grid-column: span 3;
     grid-row: 3;
   }
-  .footer__input {
+  .footer__input-wrapper {
     flex-basis: 100%;
   }
   .footer__bottom {
@@ -1824,7 +1849,7 @@ template {
     grid-row: 4;
     justify-self: start;
   }
-  .footer__input {
+  .footer__input-wrapper {
     flex-basis: 49%;
   }
   .footer__bottom {
@@ -2023,7 +2048,7 @@ template {
     order: -1;
     margin-bottom: 15px;
   }
-  .footer__input {
+  .footer__input-wrapper {
     flex-basis: 100%;
   }
   .footer__message {

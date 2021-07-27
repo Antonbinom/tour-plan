@@ -14,14 +14,18 @@ function init(){
 
 $('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
 
+
+// ---------- JQuery -----------
+
+$(document).ready(function(){
+
+// ---------- Burger Menu -----------
+
   var menuButton = document.querySelector(".menu-button");
   menuButton.addEventListener("click", function () {
     console.log('Click');
     document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
-});
-
-// ---------- JQuery -----------
-$(document).ready(function(){
+  });
 
   // ---------- Hotel Slider -----------
 
@@ -72,10 +76,12 @@ var closeModalButton = $('.modal__close');
 modalButton.on('click', openModal);
 closeModalButton.on('click', closeModal);
 
+var modalOverlay = $('.modal__overlay');
+var modalDialog = $('.modal__dialog');
+
 function openModal() {
-  var targetModal = $(this).attr('data-href');
-  $(targetModal).find('.modal__overlay').addClass('modal__overlay--visible');
-  $(targetModal).find('.modal__dialog').addClass('modal__dialog--visible');
+    modalOverlay.addClass("modal__overlay--visible");
+		modalDialog.addClass("modal__dialog--visible");
 
   $('body').addClass('hold');
 };
@@ -83,25 +89,20 @@ function openModal() {
 
 function closeModal(event) {
   event.preventDefault();
-  var modalOverlay = $('.modal__overlay');
-  var modalDialog = $('.modal__dialog');
-  modalDialog.removeClass('modal__dialog--visible');
-  modalOverlay.removeClass('modal__overlay--visible');
+		modalOverlay.removeClass("modal__overlay--visible");
+		modalDialog.removeClass("modal__dialog--visible");
+
   $('body').removeClass('hold');
 };
 
 $('.modal').on('click', function(event) {
-  var modalOverlay = $('.modal__overlay');
-  var modalDialog = $('.modal__dialog');
   modalDialog.removeClass('modal__dialog--visible');
   modalOverlay.removeClass('modal__overlay--visible');
+
   $('body').removeClass('hold');
 });
 
 $(document).on('keydown', function(event) {
-  var modalOverlay = $('.modal__overlay');
-  var modalDialog = $('.modal__dialog');
-
   if (event.code == 'Escape') {
     modalDialog.removeClass('modal__dialog--visible');
     modalOverlay.removeClass('modal__overlay--visible');
@@ -113,4 +114,28 @@ $('.modal__dialog').on('click', function(event) {
   event.stopPropagation();
 });
 
+// ---------- Form Validation -----------
+
+$(".form").each(function () {
+		$(this).validate({
+			errorClass: "invalid",
+			messages: {
+				name: {
+					required: "Please specify your name",
+					minlength: "Name must be at least 2 letters long",
+				},
+				phone: {
+					required: "We need your phone number to contact you",
+					minlength: "Your phone must be 11 digits long",
+				},
+				mail: {
+					required: "We need your email address to contact you",
+					email: "Your email address must be in the format of name@domain.com",
+				},
+			},
+		});
+	});
+	$(document).ready(function () {
+		$(".input__phone").mask("+7 (000) 000-00-00");
+	});
 });
