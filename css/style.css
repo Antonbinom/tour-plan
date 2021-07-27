@@ -1062,7 +1062,6 @@ template {
   min-width: 65px;
   height: 55px;
   border: none;
-  border-radius: 0 4px 4px 0;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -1402,14 +1401,16 @@ template {
   grid-column: span 2;
 }
 
-.footer__form {
+.footer__appeal {
   grid-column: span 2;
+  margin-bottom: 74px;
+  padding-left: 8px;
+}
+
+.footer__form {
   display: flex;
   justify-content: space-between;
-  justify-self: end;
-  align-items: start;
   flex-wrap: wrap;
-  margin-bottom: 74px;
   max-width: 539px;
 }
 
