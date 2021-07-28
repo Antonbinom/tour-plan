@@ -17,7 +17,7 @@ if(isset($mail)){
 		<b>Почта:</b> $mail<br>
         ";
 
-} else {
+} elseif($name && $phone && $message) {
     $title = 'Новое обращение Best Tour Plan';
 		$body = "
 		<h2>Обращение клиента</h2>
@@ -25,15 +25,15 @@ if(isset($mail)){
 		<b>Телефон:</b> $phone<br><br>
 		<b>Сообщение:</b><br>$message
 		";
-// }   else {
-//     $title = 'Бронирование отеля с Best Tour Plan';
-// 		$body = "
-// 		<h2>Бронирование</h2>
-// 		<b>Имя:</b> $name<br>
-// 		<b>Телефон:</b> $phone<br>
-//         <b>Почта:</b> $mail<br><br>
-// 		<b>Сообщение:</b><br> $message
-// 		";
+}   else {
+    $title = 'Бронирование отеля с Best Tour Plan';
+		$body = "
+		<h2>Бронирование</h2>
+		<b>Имя:</b> $name<br>
+		<b>Телефон:</b> $phone<br>
+        <b>Почта:</b> $mail<br><br>
+		<b>Сообщение:</b><br> $message
+		";
 }
 
 

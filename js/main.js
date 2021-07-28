@@ -59,8 +59,8 @@ const reviewSlider = new Swiper('.reviews-slider', {
     prevEl: '.reviews-slider__button--prev',
   },
 
-	speed: 500,
-	autoplay: {delay: 4000},
+	// speed: 500,
+	// autoplay: {delay: 4000},
 
 	// Переключение слайдера клавиатурой
 	keyboard: {
@@ -136,6 +136,6 @@ $(".form").each(function () {
 		});
 	});
 	$(document).ready(function () {
-		$(".input__phone").mask("+7 (000) 000-00-00");
+		$(".input-phone").mask("+7 (000) 000-00-00");
 	});
 });

@@ -123,7 +123,7 @@
               <h1 class="hotel-name hotel-info__name">Grand Hilton Hotel</h1>
               <span class="offer hotel-info__offer">Flash Offer</span>
             </div>
-            <p class="hotel-description">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</p>
+            <p class="hotel-description">Half-Board / All Inclusive + Complimentary Activities + Child Stays Free</p>
           </div>
           <!-- /.hotel-info__text -->
           <div class="rating hotel-info__rating">
@@ -395,7 +395,7 @@
     <!-- /.newsletter -->
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people thinks about us</h2>
+        <h2 class="reviews__title">What people think about us</h2>
         <div class="swiper-container reviews-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -575,7 +575,10 @@
           <!-- /.card -->
           <div class="card">
             <img src="img/card-4.jpg" alt="The blue marine discovery quest" class="card__image" />
-            <div class="card__title">The blue marine discovery quest</div>
+            <div class="card__title">
+              The blue marine discovery <br />
+              quest
+            </div>
             <button class="button card__button">Book Now</button>
           </div>
           <!-- /.card -->
@@ -683,14 +686,14 @@
           <div class="footer__contact-details">
             <h3 class="footer__title footer__title--contact">Contact Details</h3>
             <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
-            <ul class="footer__ul">
-              <li class="footer__item footer__item--contact">
+            <ul class="footer__ul footer__ul-contact">
+              <li class="footer__item footer__item--contact footer__item--gps">
                 <div class="footer__icon-wrapper">
-                  <img class="footer__icon" src="img/gps.svg" alt="Icon: Map" />
+                  <img class="footer__icon footer__icon--gps" src="img/gps.svg" alt="Icon: Map" />
                 </div>
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
               </li>
-              <li class="footer__item footer__item--contact">
+              <li class="footer__item footer__item--contact footer__item--work">
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/phone.svg" alt="Icon: Phone-call" />
                 </div>
@@ -699,7 +702,7 @@
                 Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br />
                 Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
               </li>
-              <li class="footer__item footer__item--contact">
+              <li class="footer__item footer__item--contact footer__item--mail">
                 <div class="footer__icon-wrapper"><img class="footer__icon" src="img/mail.svg" alt="Icon: Mail" /></div>
                 cherly.lawson@example.com
               </li>
@@ -709,13 +712,13 @@
           <div class="footer__appeal">
             <h3 class="footer__title footer__title--form">Send us a message</h3>
             <form action="send.php" class="footer__form form" method="post">
-              <div class="footer__input-wrapper">
+              <div class="footer__input-wrapper footer__input-wrapper--top">
                 <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" required />
               </div>
               <div class="footer__input-wrapper">
                 <input
                   type="tel"
-                  class="footer__input input__phone input"
+                  class="footer__input input-phone input"
                   placeholder="Phone Number*"
                   name="phone"
                   required
@@ -771,7 +774,7 @@
             />
             <input
               type="tel"
-              class="modal__input input__phone input"
+              class="modal__input input-phone input"
               placeholder="Phone Number*"
               name="phone"
               required
