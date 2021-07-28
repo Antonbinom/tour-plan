@@ -36,8 +36,9 @@ a:hover {
 }
 
 .input {
+  position: absolute;
+  top: 0;
   height: 50px;
-  margin-top: 15px;
   padding: 0 23px;
   font-size: 12px;
   line-height: 15px;
@@ -48,8 +49,23 @@ a:hover {
   outline: none;
 }
 
+.input__wrapper {
+  height: 65px;
+  position: relative;
+}
+
+.input__wrapper--subscribe {
+  height: 71px;
+}
+
+.invalid {
+  bottom: 2px;
+  position: absolute;
+  color: #EC1F46;
+  font-size: 10px;
+}
+
 .message {
-  margin-top: 15px;
   flex-basis: 100%;
   height: 123px;
   padding: 18px 23px;
@@ -70,11 +86,6 @@ a:hover {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-}
-
-.invalid {
-  color: #EC1F46;
-  font-size: 10px;
 }
 
 /* Document
@@ -1043,6 +1054,10 @@ template {
   color: #fff;
 }
 
+.newsletter__input-wrapper {
+  padding-top: 15px;
+}
+
 .subscribe {
   position: relative;
   width: 350px;
@@ -1077,6 +1092,7 @@ template {
   color: #fff;
   background-color: #EC1F46;
   cursor: pointer;
+  border-radius: 0 4px 4px 0;
 }
 
 .reviews {
@@ -1316,6 +1332,7 @@ template {
 }
 
 .modal__title {
+  margin-bottom: 15px;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
@@ -1338,7 +1355,7 @@ template {
 
 .modal__message {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .modal__button {
@@ -1845,6 +1862,9 @@ template {
   .hotel {
     padding-bottom: 40px;
   }
+  .hotel-wrapper {
+    justify-content: space-between;
+  }
   .hotel-name {
     flex-basis: 100%;
   }
@@ -1869,7 +1889,7 @@ template {
   .hotel-slider {
     height: 350px;
   }
-  .stars {
+  .hotel__stars {
     flex-basis: auto;
   }
   .booking {

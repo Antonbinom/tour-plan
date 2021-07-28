@@ -1,15 +1,3 @@
-// ---------- Yamdex Map API  -----------
-ymaps.ready(init);
-
-function init(){
-  var myMap = new ymaps.Map("map", {
-      center: [59.762796, 30.358813],
-      zoom: 16
-  }, {
-      searchControlProvider: 'yandex#search'
-  });
-}
-
 // ---------- Pralax for Newsletter-----------
 
 $('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
@@ -130,7 +118,7 @@ $(".form").each(function () {
 				},
 				mail: {
 					required: "We need your email address to contact you",
-					email: "Your email address must be in the format of name@domain.com",
+					email: "This email is not correct",
 				},
 			},
 		});

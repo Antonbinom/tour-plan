@@ -211,7 +211,16 @@
               <!-- /.button booking__button -->
             </div>
             <!-- /.booking -->
-            <div id="map" class="map"></div>
+            <div id="map" class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.2859173871684!2d115.21829878809417!3d-8.826231736578023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd25cc661212a01%3A0x63d7607350cf7576!2sHilton%20Bali%20Resort!5e0!3m2!1sru!2sru!4v1627480773541!5m2!1sru!2sru"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
             <!-- /.map -->
           </div>
           <!-- /.hotel-right -->
@@ -408,7 +417,15 @@
         </h2>
         <div class="newsletter__input-wrapper">
           <form action="send.php" method="POST" class="form subscribe newsletter__subscribe">
-            <input type="email" class="input subscribe__input" placeholder="Your email address" name="mail" required />
+            <div class="input__wrapper input__wrapper--subscribe">
+              <input
+                type="email"
+                class="input subscribe__input"
+                placeholder="Your email address"
+                name="mail"
+                required
+              />
+            </div>
             <button class="subscribe__button">Send</button>
           </form>
         </div>
@@ -735,10 +752,10 @@
           <div class="footer__appeal">
             <h3 class="footer__title footer__title--form">Send us a message</h3>
             <form action="send.php" class="footer__form form" method="post">
-              <div class="footer__input-wrapper footer__input-wrapper--top">
+              <div class="footer__input-wrapper input__wrapper footer__input-wrapper--top">
                 <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" required />
               </div>
-              <div class="footer__input-wrapper">
+              <div class="footer__input-wrapper input__wrapper">
                 <input
                   type="tel"
                   class="footer__input input-phone input"
@@ -786,26 +803,32 @@
           </a>
           <h3 class="modal__title">Booking</h3>
           <form action="send.php" class="modal__form form" method="post">
-            <input
-              type="text"
-              class="modal__input input"
-              placeholder="Your Full Name*"
-              minlength="2"
-              name="name"
-              required
-              aria-invalid="true"
-            />
-            <input
-              type="tel"
-              class="modal__input input-phone input"
-              placeholder="Phone Number*"
-              name="phone"
-              required
-              minlength="11"
-              maxlength="11"
-              aria-invalid="true"
-            />
-            <input type="email" class="modal__input input" placeholder="Email*" name="mail" required />
+            <div class="input__wrapper">
+              <input
+                type="text"
+                class="modal__input input"
+                placeholder="Your Full Name*"
+                minlength="2"
+                name="name"
+                required
+                aria-invalid="true"
+              />
+            </div>
+            <div class="input__wrapper">
+              <input
+                type="tel"
+                class="modal__input input-phone input"
+                placeholder="Phone Number*"
+                name="phone"
+                required
+                minlength="11"
+                maxlength="11"
+                aria-invalid="true"
+              />
+            </div>
+            <div class="input__wrapper">
+              <input type="email" class="modal__input input" placeholder="Email*" name="mail" required />
+            </div>
             <textarea class="modal__message message" placeholder="Message" name="message"> </textarea>
             <div class="modal__form-bottom">
               <button type="submit" class="modal__button button">Send</button>
@@ -825,7 +848,6 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/parallax.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=4f8bc164-54df-453f-8f7f-7e397da20b80&lang=ru_RU"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
