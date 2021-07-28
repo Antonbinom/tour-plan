@@ -39,8 +39,8 @@ $(document).ready(function(){
     prevEl: '.hotel-slider__button--prev',
   },
 
-	speed: 700,
-	autoplay: {delay: 4000},
+	// speed: 700,
+	// autoplay: {delay: 4000},
 
 	// Переключение слайдера клавиатурой
 	keyboard: {
@@ -138,4 +138,5 @@ $(".form").each(function () {
 	$(document).ready(function () {
 		$(".input-phone").mask("+7 (000) 000-00-00");
 	});
+  AOS.init();
 });
