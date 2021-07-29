@@ -104,6 +104,7 @@ $('.modal__dialog').on('click', function(event) {
 
 // ---------- Form Validation -----------
 
+var formValidate = $('.form');
 $(".form").each(function () {
 		$(this).validate({
 			errorClass: "invalid",
@@ -123,8 +124,8 @@ $(".form").each(function () {
 			},
 		});
 	});
-	$(document).ready(function () {
-		$(".input-phone").mask("+7 (000) 000-00-00");
-	});
+$(document).ready(function () {
+  $(".input-phone").mask("+7 (000) 000-00-00");
+});
   AOS.init();
 });
