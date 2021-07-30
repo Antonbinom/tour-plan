@@ -27,8 +27,8 @@ $(document).ready(function(){
     prevEl: '.hotel-slider__button--prev',
   },
 
-	// speed: 700,
-	// autoplay: {delay: 4000},
+	speed: 700,
+	autoplay: {delay: 5000},
 
 	// Переключение слайдера клавиатурой
 	keyboard: {
@@ -104,7 +104,7 @@ $('.modal__dialog').on('click', function(event) {
 
 // ---------- Form Validation -----------
 
-var formValidate = $('.form');
+// var formValidate = $('.form');
 $(".form").each(function () {
 		$(this).validate({
 			errorClass: "invalid",

@@ -49,12 +49,12 @@ a:hover {
   outline: none;
 }
 
-.input__wrapper {
+.input-wrapper {
   height: 65px;
   position: relative;
 }
 
-.input__wrapper--subscribe {
+.input-wrapper--subscribe {
   height: 71px;
 }
 
@@ -1937,6 +1937,9 @@ template {
     max-width: 576px;
     width: 92%;
   }
+  .newsletter__input-wrapper {
+    padding-top: 0;
+  }
   .newsletter__title {
     margin-bottom: 37px;
   }
@@ -2093,7 +2096,6 @@ template {
   }
   .newsletter-title {
     margin-top: 0;
-    margin-bottom: 22px;
     font-size: 20px;
     line-height: 25px;
   }
@@ -2138,17 +2140,17 @@ template {
     font-size: 18px;
     line-height: 23px;
   }
-  .activities-card--two {
-    order: 2;
-  }
-  .activities-card--three {
-    order: 1;
-  }
-  .activities-card--four {
-    order: 3;
-  }
   .card {
     flex-basis: 100%;
+  }
+  .card-two {
+    order: 2;
+  }
+  .card-three {
+    order: 1;
+  }
+  .card-four {
+    order: 3;
   }
   .card:nth-last-child(2) {
     margin-bottom: 28px;

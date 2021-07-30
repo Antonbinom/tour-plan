@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
@@ -135,7 +136,7 @@
         </div>
         <!-- /.hotel-info -->
         <div class="hotel-grid">
-          <div class="swiper-container hotel-slider hotel__slider" duration>
+          <div class="swiper-container hotel-slider hotel__slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide hotel-slider__item">
                 <img src="img/slider.png" alt="Slider" class="hotel-slider__image" />
@@ -197,11 +198,7 @@
             <div id="map" class="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.2859173871684!2d115.21829878809417!3d-8.826231736578023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd25cc661212a01%3A0x63d7607350cf7576!2sHilton%20Bali%20Resort!5e0!3m2!1sru!2sru!4v1627480773541!5m2!1sru!2sru"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
+                style="width: 100%; height: 100%; border: 0"
               ></iframe>
             </div>
             <!-- /.map -->
@@ -256,7 +253,13 @@
                   <span class="packages-price__old">$ 10,500</span>
                   <span class="packages-price__sell">$ 8,500</span>
                 </div>
-                <button class="button packages__button packages__button--active">Book Now</button>
+                <button
+                  class="button packages__button packages__button--active"
+                  data-href="#booking-modal"
+                  data-toggle="modal"
+                >
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -285,7 +288,7 @@
                   <span class="packages-price__old">$ 8,500</span>
                   <span class="packages-price__sell">$ 3,000</span>
                 </div>
-                <button class="button packages__button">Book Now</button>
+                <button class="button packages__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
               </div>
             </div>
             <!-- /.packages-info -->
@@ -315,7 +318,7 @@
                   <span class="packages-price__old">$ 10,500</span>
                   <span class="packages-price__sell">$ 9,500</span>
                 </div>
-                <button class="button packages__button">Book Now</button>
+                <button class="button packages__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
               </div>
             </div>
             <!-- /.packages-info -->
@@ -345,7 +348,7 @@
                   <span class="packages-price__old">$ 4,500</span>
                   <span class="packages-price__sell">$ 2,500</span>
                 </div>
-                <button class="button packages__button">Book Now</button>
+                <button class="button packages__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
               </div>
             </div>
             <!-- /.packages-info -->
@@ -375,7 +378,7 @@
                   <span class="packages-price__old">$ 6,500</span>
                   <span class="packages-price__sell">$ 3,500</span>
                 </div>
-                <button class="button packages__button">Book Now</button>
+                <button class="button packages__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
               </div>
             </div>
             <!-- /.packages-info -->
@@ -395,7 +398,7 @@
         </h2>
         <div class="newsletter__input-wrapper">
           <form action="send.php" method="POST" class="form subscribe newsletter__subscribe">
-            <div class="input__wrapper newsletter__input-wrapper--subscribe">
+            <div class="input-wrapper input-wrapper--subscribe">
               <input
                 type="email"
                 class="input subscribe__input"
@@ -564,7 +567,7 @@
       <div class="container">
         <h3 class="activities__title">Other Activities</h3>
         <div class="activities-wrapper">
-          <div class="card activities-card--one">
+          <div class="card card-one">
             <img src="img/card-1.jpg" alt="The curious corner of chamarel" class="card__image" />
             <div class="card__title">
               The curious corner <br />
@@ -573,7 +576,7 @@
             <button class="button card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities-card--two">
+          <div class="card card-two">
             <img src="img/card-2.jpg" alt="Gymkhana club golf course" class="card__image" />
             <div class="card__title">
               Gymkhana club golf <br />
@@ -582,7 +585,7 @@
             <button class="button card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities-card--three">
+          <div class="card card-three">
             <img src="img/card-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image" />
             <div class="card__title">
               Tamarind falls hiking <br />
@@ -591,7 +594,7 @@
             <button class="button card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities-card--four">
+          <div class="card card-four">
             <img src="img/card-4.jpg" alt="The blue marine discovery quest" class="card__image" />
             <div class="card__title">
               The blue marine discovery <br />
@@ -732,10 +735,10 @@
           <div class="footer__appeal">
             <h3 class="footer__title footer__title--form">Send us a message</h3>
             <form action="send.php" class="footer__form form" method="post">
-              <div class="footer__input-wrapper input__wrapper footer__input-wrapper--top">
+              <div class="footer__input-wrapper input-wrapper footer__input-wrapper--top">
                 <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" required />
               </div>
-              <div class="footer__input-wrapper input__wrapper">
+              <div class="footer__input-wrapper input-wrapper">
                 <input
                   type="tel"
                   class="footer__input input-phone input"
@@ -783,7 +786,7 @@
           </a>
           <h3 class="modal__title">Booking</h3>
           <form action="send.php" class="modal__form form" method="post">
-            <div class="input__wrapper">
+            <div class="input-wrapper">
               <input
                 type="text"
                 class="modal__input input"
@@ -794,7 +797,7 @@
                 aria-invalid="true"
               />
             </div>
-            <div class="input__wrapper">
+            <div class="input-wrapper">
               <input
                 type="tel"
                 class="modal__input input-phone input"
@@ -806,7 +809,7 @@
                 aria-invalid="true"
               />
             </div>
-            <div class="input__wrapper">
+            <div class="input-wrapper">
               <input type="email" class="modal__input input" placeholder="Email*" name="mail" required />
             </div>
             <textarea class="modal__message message" placeholder="Message" name="message"> </textarea>
@@ -822,8 +825,6 @@
       <!-- /.modal-overlay -->
     </div>
     <!-- /.modal -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>

@@ -272,6 +272,9 @@
 			align-items: flex-start
 			max-width: 576px
 			width: 92%
+		&__input
+			&-wrapper
+				padding-top: 0
 		&__title
 			margin-bottom: 37px
 	.card
@@ -391,7 +394,6 @@
 			width: 88%
 		&-title
 			margin-top: 0
-			margin-bottom: 22px
 			font-size: 20px
 			line-height: 25px
 			&__strong
@@ -426,15 +428,14 @@
 			font-weight: bold
 			font-size: 18px
 			line-height: 23px
-		&-card
-			&--two
-				order: 2
-			&--three
-				order: 1
-			&--four
-				order: 3
 	.card
 		flex-basis: 100%
+		&-two
+			order: 2
+		&-three
+			order: 1
+		&-four
+			order: 3
 		&:nth-last-child(2)
 			margin-bottom: 28px
 	.packages
