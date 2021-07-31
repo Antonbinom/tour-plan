@@ -821,6 +821,14 @@ template {
   border-radius: 10px;
 }
 
+.container-fluid {
+  height: 213px;
+  padding: 0;
+  background-image: url(../img/map.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .button-return {
   padding: 9px 23px;
 }
@@ -1640,11 +1648,11 @@ template {
  @mixin ======================================================================== */
 @media (min-width: 993px) {
   .button {
-    transition: .5s;
+    transition: .2s;
   }
   .button:hover {
     background-image: linear-gradient(to right, #EC1F46 0%, #ffcf33 51%, #EC1F46 100%);
-    background-size: 300% auto;
+    background-size: 200% auto;
     background-position: right center;
   }
   a {
