@@ -422,6 +422,7 @@
                 placeholder="Your email address"
                 name="mail"
                 required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
             </div>
             <button class="subscribe__button button">Send</button>
@@ -839,7 +840,14 @@
               />
             </div>
             <div class="input-wrapper">
-              <input type="email" class="modal__input input" placeholder="Email*" name="mail" required />
+              <input
+                type="email"
+                class="modal__input input"
+                placeholder="Email*"
+                name="mail"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              />
             </div>
             <textarea class="modal__message message" placeholder="Message" name="message"> </textarea>
             <div class="modal__form-bottom">
