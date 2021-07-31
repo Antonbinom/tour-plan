@@ -43,7 +43,7 @@
           </a>
 
           <form action="#" class="search navbar__search navbar__search--mobile--hidden">
-            <input type="text" class="search__input" placeholder="Search Location" autofocus />
+            <input type="text" class="search__input" placeholder="Search Location" />
             <button class="search__button button">
               <img src="img/search.svg" alt="Icon: search" />
             </button>
@@ -590,7 +590,7 @@
               The curious corner <br />
               of chamarel
             </div>
-            <button class="button card__button">Book Now</button>
+            <button class="button card__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div class="card card-two" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
@@ -599,7 +599,7 @@
               Gymkhana club golf <br />
               course
             </div>
-            <button class="button card__button">Book Now</button>
+            <button class="button card__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div class="card card-three" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -608,7 +608,7 @@
               Tamarind falls hiking <br />
               trip - full day
             </div>
-            <button class="button card__button">Book Now</button>
+            <button class="button card__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
           <div class="card card-four" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
@@ -617,7 +617,7 @@
               The blue marine discovery <br />
               quest
             </div>
-            <button class="button card__button">Book Now</button>
+            <button class="button card__button" data-href="#booking-modal" data-toggle="modal">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -757,7 +757,14 @@
             <h3 class="footer__title footer__title--form">Send us a message</h3>
             <form action="send.php" class="footer__form form" method="post">
               <div class="footer__input-wrapper input-wrapper footer__input-wrapper--top">
-                <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" required />
+                <input
+                  type="text"
+                  class="footer__input input input--error"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  pattern="^[a-zA-Z]{0,50}$"
+                  required
+                />
               </div>
               <div class="footer__input-wrapper input-wrapper">
                 <input
@@ -810,12 +817,12 @@
             <div class="input-wrapper">
               <input
                 type="text"
-                class="modal__input input"
+                class="modal__input input--error input"
                 placeholder="Your Full Name*"
                 minlength="2"
                 name="name"
+                pattern="^[a-zA-Z]{0,50}$"
                 required
-                aria-invalid="true"
               />
             </div>
             <div class="input-wrapper">
@@ -828,6 +835,7 @@
                 minlength="11"
                 maxlength="11"
                 aria-invalid="true"
+                required
               />
             </div>
             <div class="input-wrapper">
