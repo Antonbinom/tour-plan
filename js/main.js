@@ -1,3 +1,8 @@
+
+
+// ---------- JQuery -----------
+
+$(document).ready(function(){
   let map_container = document.getElementById('map_container');
     let options_map = {
         once: true,//запуск один раз, и удаление наблюдателя сразу
@@ -20,14 +25,10 @@
         }
     }
 
-// ---------- Pralax for Newsletter-----------
+  // ---------- Pralax for Newsletter-----------
 
-$('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
+  $('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
 
-
-// ---------- JQuery -----------
-
-$(document).ready(function(){
 
 // ---------- Burger Menu -----------
 
