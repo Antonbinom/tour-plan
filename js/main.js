@@ -1,8 +1,10 @@
+  // ---------- Pralax for Newsletter-----------
 
-
+  $('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
 // ---------- JQuery -----------
 
 $(document).ready(function(){
+if (document.getElementById('map_container')) {
   let map_container = document.getElementById('map_container');
     let options_map = {
         once: true,//запуск один раз, и удаление наблюдателя сразу
@@ -24,11 +26,7 @@ $(document).ready(function(){
             console.log('YMAP LOADED');
         }
     }
-
-  // ---------- Pralax for Newsletter-----------
-
-  $('.parallax-bg').parallax({imageSrc: 'img/newsletter-bg.jpg'});
-
+}
 
 // ---------- Burger Menu -----------
 
