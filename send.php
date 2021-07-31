@@ -10,22 +10,7 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 $mail = $_POST['mail'];
 
-if(isset($mail)){
-    $title = 'Подписка на рассылку с Best Tour Plan';
-		$body = "
-		<h2>Подписка на рассылку</h2>
-		<b>Почта:</b> $mail<br>
-        ";
-
-} elseif($name && $phone && $message) {
-    $title = 'Новое обращение Best Tour Plan';
-		$body = "
-		<h2>Обращение клиента</h2>
-		<b>Имя:</b> $name<br>
-		<b>Телефон:</b> $phone<br><br>
-		<b>Сообщение:</b><br>$message
-		";
-}   else {
+if(($name) && ($phone) && ($mail) && ($message)){
     $title = 'Бронирование отеля с Best Tour Plan';
 		$body = "
 		<h2>Бронирование</h2>
@@ -34,7 +19,48 @@ if(isset($mail)){
         <b>Почта:</b> $mail<br><br>
 		<b>Сообщение:</b><br> $message
 		";
+
+
+} elseif($mail) {
+    $title = 'Подписка на рассылку с Best Tour Plan';
+		$body = "
+		<h2>Подписка на рассылку</h2>
+		<b>Почта:</b> $mail<br>
+        ";
+}   else {
+    $title = 'Новое обращение Best Tour Plan';
+		$body = "
+		<h2>Обращение клиента</h2>
+		<b>Имя:</b> $name<br>
+		<b>Телефон:</b> $phone<br><br>
+		<b>Сообщение:</b><br>$message
+		";
 }
+// if(isset($mail)){
+//     $title = 'Подписка на рассылку с Best Tour Plan';
+// 		$body = "
+// 		<h2>Подписка на рассылку</h2>
+// 		<b>Почта:</b> $mail<br>
+//         ";
+
+// } elseif($name && $phone && $message) {
+//     $title = 'Новое обращение Best Tour Plan';
+// 		$body = "
+// 		<h2>Обращение клиента</h2>
+// 		<b>Имя:</b> $name<br>
+// 		<b>Телефон:</b> $phone<br><br>
+// 		<b>Сообщение:</b><br>$message
+// 		";
+// }   else {
+//     $title = 'Бронирование отеля с Best Tour Plan';
+// 		$body = "
+// 		<h2>Бронирование</h2>
+// 		<b>Имя:</b> $name<br>
+// 		<b>Телефон:</b> $phone<br>
+//         <b>Почта:</b> $mail<br><br>
+// 		<b>Сообщение:</b><br> $message
+// 		";
+// }
 
 
 // Настройки PHPMailer
