@@ -20,11 +20,21 @@
 		align-items: center
 		justify-content: space-between
 		margin-bottom: 20px
+		&--thanks
+			flex-direction: column
+			align-items: start
+			margin-bottom: 0
 		&__offer
 			margin-top: 4px
 		&__name
 			margin-top: 4px
 			margin-right: 14px
+			&--thanks
+				margin-top: 0
+				margin-right: 0
+		&__text
+			&--thanks
+				margin-bottom: 15px
 	&-description
 		margin: 0
 		font-size: 12px
@@ -172,9 +182,13 @@
 	&__button
 		width: 100%
 		min-height: 45px
-
 .map
 	width: 350px
 	height: 213px
 	overflow: hidden
 	border-radius: 10px
+.button
+	&-return
+		padding: 9px 23px
+	&:hover
+		color: $light

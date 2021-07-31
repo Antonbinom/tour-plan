@@ -15,7 +15,20 @@
 				grid-template: 500px / 300px 330px
 		&-info
 			padding: 30px 20px
-
+/* hover
+ ========================================================================= */
+@media (min-width: 993px)
+	.button
+		transition: .5s
+		&:hover
+			background-image: linear-gradient(to right, $primary 0%, #ffcf33 51%, $primary 100%)
+			background-size: 300% auto
+			background-position: right center
+	a
+		transition: color 0.15s ease
+		&:hover
+			color: $primary
+/*======================================================================== */
 @media (max-width: 992px)
 	.container,
 	.newsletter-wrapper
@@ -248,11 +261,14 @@
 			&__name
 				margin-top: 10px
 				margin-right: 0
+				&--thanks
+					margin-top: 0
 			&__rating
 				display: none
 			&__offer
 				order: -1
 				margin-right: 260px
+				margin-left: 2px
 		&-right
 			flex-direction: column !important
 			min-height: 450px
@@ -377,11 +393,18 @@
 	.hotel
 		&-info
 			margin-bottom: 38px
+			&--thanks
+				margin-bottom: 0
 			&__name
 				margin-top: 9px
+				&--thanks
+					margin-top: 0
+					font-weight: bold
+					font-size: 16px
+					line-height: 20px
 		&-slider
 			height: 250px
-			margin-bottom: 20px !important
+			margin-bottom: 19px
 		&-right
 			min-height: 440px
 		&__stars

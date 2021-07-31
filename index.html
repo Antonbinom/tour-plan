@@ -43,8 +43,8 @@
           </a>
 
           <form action="#" class="search navbar__search navbar__search--mobile--hidden">
-            <input type="text" class="search__input" placeholder="Search Location" />
-            <button class="search__button">
+            <input type="text" class="search__input" placeholder="Search Location" autofocus />
+            <button class="search__button button">
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
@@ -140,7 +140,7 @@
                 <img src="img/star.svg" alt="Icon: Star" class="star" />
               </div>
               <h1 class="hotel-name hotel-info__name">Grand Hilton Hotel</h1>
-              <span class="offer hotel-info__offer hotel-info__offer">Flash Offer</span>
+              <span class="offer hotel-info__offer">Flash Offer</span>
             </div>
             <p class="hotel-description">Half-Board / All Inclusive + Complimentary Activities + Child Stays Free</p>
           </div>
@@ -424,7 +424,7 @@
                 required
               />
             </div>
-            <button class="subscribe__button">Send</button>
+            <button class="subscribe__button button">Send</button>
           </form>
         </div>
       </div>
@@ -737,14 +737,18 @@
                 <div class="footer__icon-wrapper">
                   <img class="footer__icon" src="img/phone.svg" alt="Icon: Phone-call" />
                 </div>
-                Tel (business hours) : 269 1500
-                <br />
-                Tel (hotline) Monday - Saturday: <br class="wrap" />52-56-61-38 (08:00 am – 20:00 pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__tel-wrapper">
+                  Tel (business hours) : <a href="tel:269 1500">269 1500</a>
+                  <br />
+                  Tel (hotline) Monday - Saturday: <br class="wrap" /><a href="tel:52-56-61-38">52-56-61-38</a> (08:00
+                  am – 20:00 pm) <br />
+                  Tel (hotline) Sunday: <a href="tel:52-56-61-38">52-56-61-38</a>
+                  (08:00 am – 14:00 pm)
+                </div>
               </li>
               <li class="footer__item footer__item--contact footer__item--mail">
                 <div class="footer__icon-wrapper"><img class="footer__icon" src="img/mail.svg" alt="Icon: Mail" /></div>
-                cherly.lawson@example.com
+                <a href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
               </li>
             </ul>
           </div>

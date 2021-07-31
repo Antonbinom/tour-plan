@@ -23,11 +23,8 @@ img {
 }
 
 a {
-  transition: color 0.15s ease;
-}
-
-a:hover {
-  color: #EC1F46;
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -498,6 +495,7 @@ template {
   color: #333;
   border: none;
   background: #F5FAFE;
+  outline: none;
 }
 
 .search__button {
@@ -591,6 +589,12 @@ template {
   margin-bottom: 20px;
 }
 
+.hotel-info--thanks {
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 0;
+}
+
 .hotel-info__offer {
   margin-top: 4px;
 }
@@ -598,6 +602,15 @@ template {
 .hotel-info__name {
   margin-top: 4px;
   margin-right: 14px;
+}
+
+.hotel-info__name--thanks {
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.hotel-info__text--thanks {
+  margin-bottom: 15px;
 }
 
 .hotel-description {
@@ -806,6 +819,14 @@ template {
   height: 213px;
   overflow: hidden;
   border-radius: 10px;
+}
+
+.button-return {
+  padding: 9px 23px;
+}
+
+.button:hover {
+  color: #fff;
 }
 
 .packages {
@@ -1615,6 +1636,26 @@ template {
   }
 }
 
+/* hover
+ @mixin ======================================================================== */
+@media (min-width: 993px) {
+  .button {
+    transition: .5s;
+  }
+  .button:hover {
+    background-image: linear-gradient(to right, #EC1F46 0%, #ffcf33 51%, #EC1F46 100%);
+    background-size: 300% auto;
+    background-position: right center;
+  }
+  a {
+    transition: color 0.15s ease;
+  }
+  a:hover {
+    color: #EC1F46;
+  }
+}
+
+/*======================================================================== */
 @media (max-width: 992px) {
   .container,
   .newsletter-wrapper {
@@ -1904,12 +1945,16 @@ template {
     margin-top: 10px;
     margin-right: 0;
   }
+  .hotel-info__name--thanks {
+    margin-top: 0;
+  }
   .hotel-info__rating {
     display: none;
   }
   .hotel-info__offer {
     order: -1;
     margin-right: 260px;
+    margin-left: 2px;
   }
   .hotel-right {
     flex-direction: column !important;
@@ -2072,12 +2117,21 @@ template {
   .hotel-info {
     margin-bottom: 38px;
   }
+  .hotel-info--thanks {
+    margin-bottom: 0;
+  }
   .hotel-info__name {
     margin-top: 9px;
   }
+  .hotel-info__name--thanks {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
   .hotel-slider {
     height: 250px;
-    margin-bottom: 20px !important;
+    margin-bottom: 19px;
   }
   .hotel-right {
     min-height: 440px;
