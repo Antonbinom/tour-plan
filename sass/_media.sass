@@ -220,7 +220,8 @@
 				display: block
 		&__menu
 			padding-top: 31px
-			flex-direction: column
+			&-items
+				flex-direction: column
 			&-item
 				margin-bottom: 17px
 				&--mobile
@@ -230,6 +231,9 @@
 					margin-bottom: 27px
 				&--search
 					margin-bottom: 36px
+					width: 340px
+					margin-left: auto
+					margin-right: auto
 	.user
 		&__avatar
 			margin-bottom: 10px
@@ -574,8 +578,11 @@
 		&__button
 			width: 100%
 @media (max-width: 460px)
-	.search__input
-		width: 245px
+	.navbar
+		&__menu
+			&-item
+				&--search
+					width: 245px
 	.hotel
 		padding-top: 5px
 		&-info
