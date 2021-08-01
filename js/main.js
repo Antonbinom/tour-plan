@@ -65,7 +65,7 @@ const reviewSlider = new Swiper('.reviews-slider', {
     nextEl: '.reviews-slider__button--next',
     prevEl: '.reviews-slider__button--prev',
   },
-
+  autoHeight: true,
 	// speed: 500,
 	// autoplay: {delay: 4000},
 
