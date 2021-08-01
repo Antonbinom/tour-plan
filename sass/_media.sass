@@ -622,6 +622,10 @@
 		display: initial
 @media (max-height: 540px) and (max-width: 992px)
 	.modal
+		&__form
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
 		&__dialog
 			top: 50%
 			padding: 32px
@@ -641,16 +645,6 @@
 				display: grid
 				grid-template-columns: repeat(3, 1fr)
 				text-align: center
-	.modal
-		&__form
-			display: flex
-			justify-content: space-between
-			flex-wrap: wrap
-		&__input
-			&--mobile
-				flex-basis: 48%
-				&--email
-					flex-basis: 100%
 @media (max-height: 375px) and (max-width: 812px)
 	.navbar
 		&__menu
@@ -691,11 +685,9 @@
 				height: 55px
 				&--email
 					height: 55px
-					flex-basis: 100%
 		&__message
 			height: 40px
-			&--mobile
-				flex-basis: 100%
+			padding-top: 13px
 	.user
 		&__name
 			display: none
