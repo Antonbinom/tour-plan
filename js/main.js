@@ -135,7 +135,7 @@ $(".form").each(function () {
 					minlength: "Name must be at least 2 letters long",
 				},
 				phone: {
-					required: "We need your phone number to contact you",
+					required: "Please specify your phone number",
 					minlength: "Your phone must be 11 digits long",
 				},
 				mail: {
