@@ -44,7 +44,7 @@
 
           <form action="#" class="search navbar__search navbar__search--mobile--hidden">
             <input type="text" class="search__input" placeholder="Search Location" />
-            <button class="search__button">
+            <button class="search__button button">
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
@@ -82,27 +82,29 @@
               </form>
             </li>
             <!-- /.search -->
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">All Deals</a>
-            </li>
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">Hotels</a>
-            </li>
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">Activities</a>
-            </li>
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">Hotel Day Packages</a>
-            </li>
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">Restaurants</a>
-            </li>
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">Events</a>
-            </li>
-            <li class="navbar__menu-item">
-              <a href="#" class="navbar__menu-link">Rodrigues</a>
-            </li>
+            <ul class="navbar__menu-items">
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">All Deals</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">Hotels</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">Activities</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">Hotel Day Packages</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">Restaurants</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">Events</a>
+              </li>
+              <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-link">Rodrigues</a>
+              </li>
+            </ul>
           </ul>
           <!-- /.navbar__menu -->
         </div>
@@ -147,11 +149,11 @@
     <div class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="index.html" class="logo footer__logo"
+          <a href="index.html" class="logo footer__logo" data-aos="fade-up-right"
             ><img src="img/logo.svg" class="footer__logo-image" alt="Logo: Best Tour Plan" />
           </a>
           <div class="footer__list footer__categories">
-            <h3 class="footer__title">All categories</h3>
+            <h3 class="footer__title footer__title--categories">All categories</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">All Deals </a>
@@ -274,7 +276,14 @@
             <h3 class="footer__title footer__title--form">Send us a message</h3>
             <form action="send.php" class="footer__form form" method="post">
               <div class="footer__input-wrapper input-wrapper footer__input-wrapper--top">
-                <input type="text" class="footer__input input" placeholder="Your Full Name*" name="name" required />
+                <input
+                  type="text"
+                  class="footer__input input input--error"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  pattern="^[a-zA-Z]{0,50}$"
+                  required
+                />
               </div>
               <div class="footer__input-wrapper input-wrapper">
                 <input
