@@ -619,3 +619,29 @@
 			padding: 30px 20px
 	.wrap
 		display: initial
+@media (max-height: 510px) and (max-width: 767px)
+	.navbar
+		&__menu
+			&-items
+				display: grid
+				grid-template-columns: repeat(3, 1fr)
+				text-align: center
+@media (max-height: 375px) and (max-width: 767px)
+	.navbar
+		&__menu
+			&-item
+				margin-bottom: 15px
+			&-link
+				font-size: 12px
+				line-height: 15px
+@media (max-height: 320px)	and (max-width: 767px)
+	.navbar
+		&__menu
+			&-item
+				margin-bottom: 15px
+			&-link
+				font-size: 12px
+				line-height: 15px
+	.user
+		&__name
+			display: none
