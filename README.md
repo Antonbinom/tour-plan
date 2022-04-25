@@ -12,6 +12,7 @@ Tour Plan
 - Адаптивная, валидная, кросбраузерная верстка
 - Слайдеры
 - Валидация форм
+- Отправка формы на email
 - Модальное окно
 - Parallax эффект
 - Анимация
@@ -23,6 +24,7 @@ Tour Plan
 - SASS
 - JQuery
 - Плагины JQuery
+- PHP Mailer
 - Pixel perfect
 - BEM
 
