@@ -10,7 +10,6 @@ Tour Plan
 ## Функционал
 
 - Адаптивная, валидная, кросбраузерная верстка
-- BEM
 - Слайдеры
 - Валидация форм
 - Модальное окно
@@ -24,6 +23,8 @@ Tour Plan
 - SASS
 - JQuery
 - Плагины JQuery
+- Pixel perfect
+- BEM
 
 ## <a href="https://antonbinom.github.io/tour-plan/">Ссылка</a>
 
